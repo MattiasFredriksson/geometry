@@ -414,7 +414,7 @@ struct dissolve
     template
     <
         typename Geometry, typename RescalePolicy, typename OutputIterator,
-        typename Strategy, typename Visitor
+        typename Visitor
     >
     static inline OutputIterator apply(Geometry const& geometry,
                                        RescalePolicy const& rescale_policy,
@@ -439,8 +439,7 @@ struct dissolve<GeometryOut, Strategy, false>
 {
     template
     <
-        typename Geometry, typename RescalePolicy, typename OutputIterator,
-        typename Strategy, typename Visitor
+        typename Geometry, typename RescalePolicy, typename OutputIterator, typename Visitor
     >
     static inline OutputIterator apply(Geometry const& geometry,
                                        RescalePolicy const& rescale_policy,
